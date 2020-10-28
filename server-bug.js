@@ -21,7 +21,6 @@ aedes.on('publish', (publishPacket, client) => {
 aedes.on('subscribe', (subscriptions, client) => {
   console.log(`$on subscribe from ${client.id}`, subscriptions);
   const topic = `test/${client.id}`;
-  console.log(`$ connackSent`);
   aedes.publish(
     {
       cmd: 'publish',
