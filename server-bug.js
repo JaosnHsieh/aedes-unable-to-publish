@@ -34,6 +34,14 @@ aedes.on('subscribe', (subscriptions, client) => {
   );
 });
 
+aedes.on('clientError', (...args) => {
+  console.log(`$ clientError`, args);
+});
+
+aedes.on('connectionError', (...args) => {
+  console.log(`$ connectionError`, args);
+});
+
 serverInit();
 
 function serverInit() {

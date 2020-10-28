@@ -29,6 +29,9 @@ function go(number) {
       console.log(`$ on message`, topic, payload);
       go(1);
     });
+    client.on('error', (...args) => {
+      console.log(`$ error`, args);
+    });
     setTimeout(() => {
       console.log(`$ didn't receive message, unable to publish`);
     }, 2000);
