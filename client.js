@@ -26,6 +26,7 @@ function go(number) {
     });
     let isReceivedMsg = false;
     client.on('message', function (topic, payload) {
+      isReceivedMsg = true;
       console.log(`$ on message`, topic, payload);
       go(1);
     });
@@ -33,7 +34,9 @@ function go(number) {
       console.log(`$ error`, args);
     });
     setTimeout(() => {
-      console.log(`$ didn't receive message, unable to publish`);
+      if (isReceivedMsg === false) {
+        console.log(`$ didn't receive message, unable to publish`);
+      }
     }, 2000);
   }
 }
