@@ -1,7 +1,7 @@
 const Socket = require('net');
 const Http = require('http');
 const WSServer = require('websocket-stream');
-const mqemitter = require('./mqemitter');
+const mqemitter = require('mqemitter');
 // mqemitter options same as aedes default but added console.log to this._messageQueue.length
 const mq = mqemitter({
   concurrency: 2,
