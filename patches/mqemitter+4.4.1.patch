@@ -69,12 +69,12 @@ index 4521a30..a97b1b4 100644
    assert(message)
 -
 +  console.log(`$ message.topic`,message.topic);
-+  // const isNewClients = /new\/clients/.test(message.topic);
-+  // const isSys = message.topic.startsWith('$SYS/');
-+  // if(isNewClients &&isSys ){
-+  //   console.log(`$ isNewClients &&isSys `)
-+  //   return;
-+  // }
++   const isNewClients = /new\/clients/.test(message.topic);
++   const isSys = message.topic.startsWith('$SYS/');
++   if(isNewClients &&isSys ){
++     console.log(`$ isNewClients &&isSys `)
++     return;
++   }
    cb = cb || noop
  
    if (this.closed) {
