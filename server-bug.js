@@ -4,7 +4,7 @@ const WSServer = require('websocket-stream');
 const mqemitter = require('mqemitter');
 // mqemitter options same as aedes default but added console.log to this._messageQueue.length
 const mq = mqemitter({
-  concurrency: 2,
+  concurrency: 1,
   matchEmptyLevels: true, // [MQTT-4.7.1-3]
 });
 
