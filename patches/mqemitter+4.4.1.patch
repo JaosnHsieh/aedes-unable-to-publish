@@ -1,0 +1,14 @@
+diff --git a/node_modules/mqemitter/mqemitter.js b/node_modules/mqemitter/mqemitter.js
+index 4521a30..f5bbf89 100644
+--- a/node_modules/mqemitter/mqemitter.js
++++ b/node_modules/mqemitter/mqemitter.js
+@@ -19,6 +19,9 @@ function MQEmitter (opts) {
+ 
+   this._messageQueue = []
+   this._messageCallbacks = []
++  setInterval(()=>{
++    console.log(`$ ./node_modules/mqemitter/mqemitter.js this._messageCallbacks.length`,this._messageCallbacks.length)
++  },1000);
+   this._parallel = fastparallel({
+     results: false,
+     released

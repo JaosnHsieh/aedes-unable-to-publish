@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "server": "node ./server-bug.js",
-    "client": "node ./client.js"
+    "client": "node ./client.js",
+    "postinstall": "patch-package"
   },
   "keywords": [],
   "author": "jasonh",
@@ -14,6 +15,7 @@
     "aedes": "^0.46.1",
     "mqemitter": "^4.4.1",
     "mqtt": "^4.2.8",
+    "patch-package": "^6.4.7",
     "websocket-stream": "^5.5.2"
   }
 }
